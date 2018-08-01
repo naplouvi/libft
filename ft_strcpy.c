@@ -6,14 +6,14 @@
 /*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/08/01 15:41:08 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 15:41:11 by nathan      ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/01 19:15:57 by nathan      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strcpy(char *dst, const char *src)
+char    *ft_strcpy(char *dst, char *src)
 {
     int i;
 

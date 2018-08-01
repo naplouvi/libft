@@ -1,39 +1,32 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strstr.c                                      .::    .:/ .      .::   */
+/*   ft_strcat.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:56:32 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 18:35:38 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 18:37:15 by nathan       #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/01 18:50:02 by nathan      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strcat(char *dest, char *src)
 {
-	int		i;
-	int		j;
-	int		len;
+	int	i;
+	int	len;
 
 	i = 0;
-	j = 0;
-    if (!to_find)
-        return (str);
-	len = ft_strlen((char*)to_find);
-	while (str[i])
+	len = 0;
+	while (dest[len] != '\0')
+		len++;
+	while (src[i] != '\0')
 	{
-		while (to_find[j] == str[i + j])
-		{
-			if (j == len - 1)
-				return (str + i);
-			j++;
-		}
-		j = 0;
+		dest[len + i] = src[i];
 		i++;
 	}
-	return (0);
+	dest[len + i] = '\0';
+	return (dest);
 }

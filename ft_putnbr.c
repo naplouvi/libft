@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strstr.c                                      .::    .:/ .      .::   */
+/*   ft_putnbr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:56:32 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 18:35:38 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 19:00:43 by nathan       #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/01 19:00:56 by nathan      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+void	ft_putnbr(int nb)
 {
-	int		i;
-	int		j;
-	int		len;
+	long	n;
 
-	i = 0;
-	j = 0;
-    if (!to_find)
-        return (str);
-	len = ft_strlen((char*)to_find);
-	while (str[i])
+	n = nb;
+	if (nb < 0)
 	{
-		while (to_find[j] == str[i + j])
-		{
-			if (j == len - 1)
-				return (str + i);
-			j++;
-		}
-		j = 0;
-		i++;
+		ft_putchar('-');
+		n = -n;
 	}
-	return (0);
+	if (n > 9)
+	{
+		ft_putnbr(n / 10);
+		ft_putnbr(n % 10);
+	}
+	else
+		ft_putchar(n + '0');
 }

@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strstr.c                                      .::    .:/ .      .::   */
+/*   ft_atoi.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:56:32 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 18:35:38 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 18:37:47 by nathan       #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/01 19:19:13 by nathan      ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+int	ft_atoi(char *str)
 {
 	int		i;
-	int		j;
-	int		len;
+	long	nb;
+	int		neg;
 
 	i = 0;
-	j = 0;
-    if (!to_find)
-        return (str);
-	len = ft_strlen((char*)to_find);
-	while (str[i])
+	nb = 0;
+	while (str[i] == '\n' || str[i] == '\t' || str[i] == '\v' || str[i] == '\f'
+			|| str[i] == '\r' || str[i] == ' ')
+		i++;
+	if (str[i] == '-' || str[i] == '+')
 	{
-		while (to_find[j] == str[i + j])
-		{
-			if (j == len - 1)
-				return (str + i);
-			j++;
-		}
-		j = 0;
+		neg = str[i] == '-' ? 1 : 0;
 		i++;
 	}
-	return (0);
+	while (str[i] >= '0' && str[i] <= '9')
+	{
+		nb = nb * 10 + str[i] - 48;
+		i++;
+	}
+	return (neg == 1 ? -nb : nb);
 }
