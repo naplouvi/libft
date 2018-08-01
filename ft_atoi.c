@@ -3,21 +3,21 @@
 /*                                                              /             */
 /*   ft_atoi.c                                        .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
+/*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 18:37:47 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 19:19:13 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 18:37:47 by naplouvi     #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/02 00:20:22 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
-	int		i;
-	long	nb;
-	int		neg;
+	int			i;
+	long		nb;
+	int			neg;
 
 	i = 0;
 	nb = 0;

@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_strdup.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
+/*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:37:33 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 19:18:03 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 15:37:33 by naplouvi     #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/02 00:19:22 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strdup(char *s1)
+char    *ft_strdup(const char *s1)
 {
     char  *s2;
 

@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_strcpy.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
+/*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:41:08 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 19:15:57 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 15:41:08 by naplouvi     #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/02 00:19:41 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strcpy(char *dst, char *src)
+char    *ft_strcpy(char *dst, const char *src)
 {
     int i;
 

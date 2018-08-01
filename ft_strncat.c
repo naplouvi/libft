@@ -1,24 +1,35 @@
 /* ************************************************************************** */
 /*                                                          LE - /            */
 /*                                                              /             */
-/*   ft_strlen.c                                      .::    .:/ .      .::   */
+/*   ft_strncat.c                                     .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
 /*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:40:27 by naplouvi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/02 00:19:14 by naplouvi    ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 23:42:48 by naplouvi     #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/01 23:54:18 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t ft_strlen(const char *str)
+char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-    size_t  i;
+	size_t		destlen;
+	size_t		srclen;
+	size_t		i;
 
-    i = 0;
-    while (str[i])
-        i++;
-    return (i);
+	i = 0;
+	destlen = ft_strlen(dest);
+	srclen = ft_strlen((char*)src);
+	while ((destlen <= (destlen + srclen)) && (n > 0))
+	{
+		dest[destlen] = src[i];
+		destlen++;
+		srclen--;
+		i++;
+		n--;
+	}
+	dest[destlen] = '\0';
+	return (dest);
 }

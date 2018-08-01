@@ -3,17 +3,17 @@
 /*                                                              /             */
 /*   ft_strstr.c                                      .::    .:/ .      .::   */
 /*                                                 +:+:+   +:    +:  +:+:+    */
-/*   By: nathan <nathan@student.le-101.fr>          +:+   +:    +:    +:+     */
+/*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
-/*   Created: 2018/08/01 15:56:32 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/01 18:35:38 by nathan      ###    #+. /#+    ###.fr     */
+/*   Created: 2018/08/01 15:56:32 by naplouvi     #+#   ##    ##    #+#       */
+/*   Updated: 2018/08/02 00:18:41 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strstr(char *str, char *to_find)
+char	*ft_strstr(const char *str, const char *to_find)
 {
 	int		i;
 	int		j;
