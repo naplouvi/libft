@@ -6,28 +6,21 @@
 /*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/08/02 00:54:12 by naplouvi     #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/02 00:59:20 by naplouvi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/06 10:25:39 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char    *ft_strrchr(const char *str, int c)
+char    *ft_strchr(const char *s, int c)
 {
-    size_t  i;
-
-    i = ft_strlen(str);
-    if (c == '\0')
+    while (*s != '\0' && *s != (char)c)
     {
-
-        return ((char)str[i]);
+        s++;
     }
-    while (i >= 0)
-    {
-        if (str[i] == c)
-            return ((char)str[i]);
-        i--;
-    }
-    return (NULL);
+    if (*s != (char)c)
+        return (NULL);
+    else
+        return ((char*)s);
 }
