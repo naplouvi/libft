@@ -6,7 +6,7 @@
 /*   By: naplouvi <naplouvi@student.le-101.fr>      +:+   +:    +:    +:+     */
 /*                                                 #+#   #+    #+    #+#      */
 /*   Created: 2018/08/01 15:40:35 by nathan       #+#   ##    ##    #+#       */
-/*   Updated: 2018/08/20 20:48:37 by naplouvi    ###    #+. /#+    ###.fr     */
+/*   Updated: 2018/08/20 20:52:36 by naplouvi    ###    #+. /#+    ###.fr     */
 /*                                                         /                  */
 /*                                                        /                   */
 /* ************************************************************************** */
@@ -47,17 +47,6 @@ int     ft_toupper(int c);
 int     ft_tolower(int c);
 void	ft_putnbr(int nb);
 void    ft_putchar(char c);
-
-
-
-
-
-
-
-
-
-
-
-
+void    ft_putstr(char *str);
 
 #endif
